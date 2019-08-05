@@ -1,3 +1,12 @@
+#board {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#logo {
+  width: 13.5%;
+  margin: 0 auto;
+}
 
 span.data-grid-container, span.data-grid-container:focus {
   outline: none;
@@ -9,11 +18,13 @@ span.data-grid-container, span.data-grid-container:focus {
 } 
 
 .data-grid-container .data-grid .cell.updated {
-    background-color: rgba(0, 145, 253, 0.16);
-    transition : background-color 0ms ease ;
+    //background-color: rgba(0, 145, 253, 0.16);
+    //transition : background-color 0ms ease ;
 }
-.data-grid-container .data-grid .cell {
-  height: 17px;
+
+.vertex .data-grid-container .data-grid .cell {
+  height: 32px;
+  width: 96px;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -21,8 +32,21 @@ span.data-grid-container, span.data-grid-container:focus {
   cursor: cell;
   background-color: unset;
   transition : background-color 500ms ease;
-  vertical-align: middle;
-  text-align: right;
+  border: 1px solid #DDD;
+  padding: 0;
+  font-family: "Avenir";
+}
+
+.data-grid-container .data-grid .cell {
+  height: 74px;
+  width: 106px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  cursor: cell;
+  background-color: unset;
+  transition : background-color 500ms ease;
   border: 1px solid #DDD;
   padding: 0;
 }
@@ -49,15 +73,16 @@ span.data-grid-container, span.data-grid-container:focus {
   outline: none !important;
   border: 2px solid rgb(33, 133, 208);
   text-align:right;
-  width: calc(100% - 6px);
-  height: 11px;
+  width: calc(100%);
+  height: 32px;
   background: none;
   display: block;
 }
 
 
 .data-grid-container .data-grid .cell {
-  vertical-align: bottom;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .data-grid-container .data-grid .cell,
