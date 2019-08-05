@@ -235,7 +235,7 @@ export default class DataSheet extends PureComponent {
     } else if (keyCode === DOWN_KEY) {
       this.handleNavigate(e, {i: 1, j: 0})
     } else if (commit && keyCode === ENTER_KEY) {
-      //this.handleNavigate(e, {i: e.shiftKey ? -1 : 1, j: 0})
+      this.handleNavigate(e, {i: e.shiftKey ? -1 : 1, j: 0})
     }
   }
 
