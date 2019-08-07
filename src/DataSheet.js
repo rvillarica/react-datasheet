@@ -5,28 +5,6 @@ import Row from './Row'
 import Cell from './Cell'
 import DataCell from './DataCell'
 import DataEditor from './DataEditor'
-import ValueViewer from './ValueViewer'
-import { TAB_KEY, ENTER_KEY, DELETE_KEY, ESCAPE_KEY, BACKSPACE_KEY,
-  LEFT_KEY, UP_KEY, DOWN_KEY, RIGHT_KEY } from './keys'
-
-const isEmpty = (obj) => Object.keys(obj).length === 0
-
-const range = (start, end) => {
-  const array = []
-  const inc = (end - start > 0)
-  for (let i = start; inc ? (i <= end) : (i >= end); inc ? i++ : i--) {
-    inc ? array.push(i) : array.unshift(i)
-  }
-  return array
-}
-
-const defaultParsePaste = (str) => {
-  return str.split(/\r\n|\n|\r/)
-    .map((row) => row.split('\t'))
-}
-
-export default class DataSheet extends PureComponent {
-  constructor (props) {
     super(props)
     this.onMouseDown = this.onMouseDown.bind(this)
     this.onMouseUp = this.onMouseUp.bind(this)
