@@ -397,8 +397,12 @@ export default class DataSheet extends PureComponent {
     let editing = (isEmpty(this.state.editing) || this.state.editing.i !== i || this.state.editing.j !== j)
       ? {} : this.state.editing
 
+    console.log("mousedown");
+    
+    let shouldSelect = editing ? false : true;
+
     this._setState({
-      selecting: true,
+      selecting: shouldSelect,
       start: e.shiftKey ? this.state.start : {i, j},
       end: {i, j},
       editing: editing,
